@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctor Appointment Booking</title>
+    <style>
+        body {
+            font-family:monospace;
+            text-align: center;
+             background-image: url("hospital1.png");
+            background-repeat: no-repeat;
+            background-size:100%;
+        }
+        .ff{
+            border:2px solid blue;
+            border-radius:10px;
+            margin-top:250px;
+            margin-left:300px;
+            margin-right:400px;
+            background-color: #007BFF;
+        }
+        input{
+            border: 2px solid red;
+            border-radius: 5px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+        input[type="text"], select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+        }
+        button {
+            background-color:green;
+            color: white;
+            border: none;
+        }
+    </style>
+    <script>
+        const appointmentForm = document.getElementById('appointmentForm');
+        const confirmationDiv = document.getElementById('confirmation');
+        
+            
+           const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const doctor = document.getElementById('doctor').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+            
+            const confirmationMessage = `Thank you, ${name}! Your appointment with ${doctor} on ${date} at ${time} has been booked. We have sent a confirmation email to ${email}.`;
+            
+            
+
+       function appointment()
+       {
+        document.wrte(`Thank you, ${name}! Your appointment with ${doctor} on ${date} at ${time} has been booked. We have sent a confirmation email to ${email}.`);
+       }
+    </script>
+
+</head>
+<body>
+    <div class="ff">
+    <h1 style="font-weight:bold">Book an Appointment</h1>
+    <form id="appointmentForm" action="thank.html">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="text" id="email" required>
+        
+        <label for="doctor">Select a Doctor:</label>
+        <select id="doctor" required>
+            <option value="dr-smith">Mohit Singh</option>
+            <option value="dr-jones">Santosh Kumar</option>
+            <option value="dr-doe">Rahul Kumar</option>
+        </select>
+        
+        <label for="date">Select Date:</label>
+        <input type="date" id="date" required>
+        
+        <label for="time">Select Time:</label>
+        <input type="time" id="time" required>
+        
+        <button type="submit" href="thank.html" class="btn btn-success">Book Appointment</button>
+    </form>
+  
+    
+</div>
+    
+<div id="confirmation"></div>
+
+</body>
+</html>
